@@ -1,0 +1,131 @@
+/* MAIN NAVBAR */
+.navbar {
+  height: 64px;
+  background: linear-gradient(90deg, #0f172a, #1e293b);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 48px;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* LEFT SECTION */
+.nav-left h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #60a5fa;
+  margin: 0;
+}
+
+/* CENTER MENU */
+.nav-center {
+  display: flex;
+  align-items: center;
+  gap: 56px;                 /* ✅ CLEAR GAP BETWEEN MENU ITEMS */
+}
+
+.nav-center button {
+  background: none;
+  border: none;
+  color: #e5e7eb;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+
+  padding: 10px 20px;        /* ✅ CLICKABLE SPACE */
+  letter-spacing: 0.3px;
+  position: relative;
+}
+
+/* Hover effect */
+.nav-center button:hover {
+  color: #60a5fa;
+}
+
+/* Active button styling */
+.nav-center button.active {
+  color: #60a5fa;
+  font-weight: 600;
+}
+
+.nav-center button.active::after {
+  width: 70%;
+}
+
+/* Underline animation */
+.nav-center button::after {
+  content: "";
+  position: absolute;
+  left: 15%;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background-color: #60a5fa;
+  transition: width 0.3s ease;
+}
+
+.nav-center button:hover::after {
+  width: 70%;
+}
+
+/* RIGHT SECTION */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+/* Profile Section */
+.profile-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Profile Avatar */
+.profile-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #60a5fa, #3b82f6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 8px rgba(96, 165, 250, 0.3);
+}
+
+.profile-avatar:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(96, 165, 250, 0.5);
+}
+
+/* Username */
+.username {
+  font-size: 14px;
+  font-weight: 500;
+  color: #e5e7eb;
+  padding-right: 14px;
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Logout Button */
+.logout-btn {
+  background: #ef4444;
+  border: none;
+  padding: 9px 20px;
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: #dc2626;
+}
